@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Read (One)</title>
+</head>
+<body>
+    <h2>User: {{user.id}}</h2>
+    <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Created On: {{user.created_at}}</p>
+    <p>Updated: {{user.updated_at}}</p>
+    <a href="/edit/{{ user.id }}" class="btn btn-success">Edit</a>
+    <a href="/users" class="btn btn-primary">Home</a>
+    <a href="/delete/{{ user.id }}" class="btn btn-danger">Delete</a>
+</body>
+</html>

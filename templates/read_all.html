@@ -16,6 +16,7 @@
                 <th scope="col">Full Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Created At</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,11 @@
                     <td>{{ user.first_name }} {{ user.last_name }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ user.created_at }}</td>
+                    <td>
+                        <a href="/show/{{ user.id }}">Show</a> 
+                        <a href="/edit/{{ user.id }}">Edit</a> 
+                        <a href="/delete/{{ user.id }}">Delete</a>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
